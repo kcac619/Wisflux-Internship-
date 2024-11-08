@@ -3,6 +3,31 @@ Create a new github repo for this task.
 Create a new branch 'native-js' and solve using native js functions.
 Then create a brach 'lodash-js' and solve using lodash functions.
 
+## Setup Steps for Running and Checking the Assignment
+
+1. Clone the repository:
+   ```sh
+   git clone <repository-url>
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd <repository-directory>
+   ```
+3. Install dependencies (if any):
+   ```sh
+   npm install
+   ```
+4. Create and switch to the 'native-js' branch:
+   ```sh
+   git checkout -b native-js
+   ```
+5. Open the project in your preferred code editor and review the solutions implemented using native JavaScript functions.
+6. To check the solutions, you can run the JavaScript file using Node.js:
+   ```sh
+   node <filename>.js
+   ```
+7. Repeat steps 4-6 for the 'lodash-js' branch to review solutions implemented using lodash functions.
+
 ```
 const members = [
 {name: 'Aman Makhija', age: 20},
