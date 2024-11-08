@@ -3,7 +3,7 @@
 1. Clone the repository:
 
    ```sh
-   git clone <repository-url>
+   git clone https://github.com/kcac619/Wisflux-Internship-.git
    ```
 
 2. Install dependencies (if any):
@@ -19,6 +19,10 @@
 5. To check the solutions, you can run the JavaScript file using Node.js:
    ```sh
    node index.js
+   ```
+   OR
+   ```sh
+   npm start
    ```
 
 ```
