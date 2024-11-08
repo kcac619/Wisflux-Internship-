@@ -34,17 +34,22 @@ const maxAgePerson = _.maxBy(members, "age");
 console.log("5. Person with Maximum Age: ", maxAgePerson, "\n");
 
 // 6. Divide persons in three groups
-const personsGroup = _.groupBy(members, (member) => {
-  if (!member.age) return "noage";
-  return member.age < 35 ? "young" : "old";
-});
-// Ensure all groups exist even if empty
-const finalGroups = _.defaults(personsGroup, {
-  young: [],
-  old: [],
-  noage: [],
-});
-console.log("6. Persons Group: ", finalGroups, "\n");
+const personsGroup = _.reduce(
+  members,
+  (acc, member) => {
+    if (member.age < 35) {
+      acc.young.push(member);
+    } else if (member.age > 35) {
+      acc.old.push(member);
+    } else {
+      acc.noage.push(member);
+    }
+
+    return acc;
+  },
+  { young: [], old: [], noage: [] }
+);
+console.log("6. Persons Group: ", personsGroup, "\n");
 
 // 7. Add a new member at index 2
 const newMember = { name: "Kunal Chhatwani", age: 21 };
@@ -65,7 +70,7 @@ const newMembers = _.concat([anotherMember], members);
 console.log("9. New Members Array: ", newMembers, "\n");
 
 // 10. Extract properties of object using destructuring
-const { name, age } = _.head(members);
+const { name, age } = members[0];
 console.log("10. Destructured properties:", { name, age }, "\n");
 
 // 11. Rename extracted property of object while destructuring
@@ -84,7 +89,8 @@ console.log(
 );
 
 // 13. Create new object by copying and override property
-const newObjectWithUpdatedAge = _.assign({}, members[3], { age: 22 });
+const newObjectWithUpdatedAge = { ...members[3], age: 22 };
+//  _.assign({}, members[3], { age: 22 });
 console.log(
   "13. New object with overridden age:",
   newObjectWithUpdatedAge,

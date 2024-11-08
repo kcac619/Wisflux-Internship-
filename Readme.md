@@ -3,7 +3,7 @@
 1. Clone the repository:
 
    ```sh
-   git clone <repository-url>
+   git clone https://github.com/kcac619/Wisflux-Internship-.git
    ```
 
 2. Install dependencies (if any):
@@ -12,13 +12,17 @@
    ```
 3. Create and switch to the 'native-js' branch:
    ```sh
-   git checkout -b native-js
+   git checkout -b lodash-js
    ```
 4. Open the project in your preferred code editor and review the solutions implemented using native JavaScript functions.
 
 5. To check the solutions, you can run the JavaScript file using Node.js:
    ```sh
    node index.js
+   ```
+   OR
+   ```sh
+   npm start
    ```
 
 ```
