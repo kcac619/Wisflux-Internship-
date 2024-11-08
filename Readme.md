@@ -2,7 +2,8 @@ Here is the Javascript exercise. you need to solve each question which is based 
 Create a new github repo for this task.
 Create a new branch 'native-js' and solve using native js functions.
 Then create a brach 'lodash-js' and solve using lodash functions.
-/\*
+
+```
 const members = [
 {name: 'Aman Makhija', age: 20},
 {name: 'Himanshu Jangid', age: 40},
@@ -12,6 +13,7 @@ const members = [
 {name: 'Kartik Dhwan', age: 45},
 {name: 'Hardik Dhawan', age: 51}
 ];
+```
 
 1. Get array of first names of everyone
 2. Make everyone's last names in UPPERCASE in given array of objects
