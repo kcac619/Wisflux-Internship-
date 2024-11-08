@@ -33,22 +33,12 @@ console.log("4. Average Age: ", averageAge, "\n");
 const maxAgePerson = _.maxBy(members, "age");
 console.log("5. Person with Maximum Age: ", maxAgePerson, "\n");
 
-// 6. Divide persons in three groups
-const personsGroup = _.reduce(
-  members,
-  (acc, member) => {
-    if (member.age < 35) {
-      acc.young.push(member);
-    } else if (member.age > 35) {
-      acc.old.push(member);
-    } else {
-      acc.noage.push(member);
-    }
+// 6. Divide persons in three groups using groupBy
+const personsGroup = _.groupBy(members, (member) => {
+  if (!member.age) return "noage";
+  return member.age < 35 ? "young" : "old";
+});
 
-    return acc;
-  },
-  { young: [], old: [], noage: [] }
-);
 console.log("6. Persons Group: ", personsGroup, "\n");
 
 // 7. Add a new member at index 2
@@ -97,6 +87,6 @@ console.log(
   "\n"
 );
 
-// 14. Use reduce function
+// 14. Use reduce function on array and object
 const totalAge = _.reduce(members, (sum, member) => sum + (member.age || 0), 0);
 console.log("14. Sum of all ages:", totalAge);
