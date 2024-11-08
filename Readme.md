@@ -50,7 +50,16 @@ const members = [
    }
 ```
 
-Less than 35yrs is young, above 35 is old 7. add a new member to same members array instance at index 2 8. extract first and second element using destructing 9. Create a new array instance adding a new member at index 0,
-and keeping existing afterwards 10. Extract properties of object using destructuring 11. Rename extracted property of object while destructing 12. Destructure any property of an object and use spread operator
-to get remaining properties in an object 13. Create a new object by copying using spread operator, override
-one of the properties to assign a new value in the same step 14. Use reduce function on array and object
+Less than 35yrs is young, above 35 is old
+
+7. add a new member to same members array instance at index 2
+8. extract first and second element using destructing
+9. Create a new array instance adding a new member at index 0,
+   and keeping existing afterwards
+10. Extract properties of object using destructuring
+11. Rename extracted property of object while destructing
+12. Destructure any property of an object and use spread operator
+    to get remaining properties in an object
+13. Create a new object by copying using spread operator, override
+    one of the properties to assign a new value in the same step
+14. Use reduce function on array and object
